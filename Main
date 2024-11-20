@@ -1,0 +1,15 @@
+import random
+
+def generate_ascii_pattern(size=5):
+    """Generates a random ASCII pattern of given size."""
+    symbols = ['*', '#', '@', '+', '-', '=', 'o']
+    pattern = ""
+    for _ in range(size):
+        line = "".join(random.choice(symbols) for _ in range(size))
+        pattern += line + "\n"
+    return pattern
+
+# Main function
+if __name__ == "__main__":
+    print("Random ASCII Pattern:")
+    print(generate_ascii_pattern())
